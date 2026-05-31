@@ -247,7 +247,8 @@
     "Tulasi Kari":                 "./Assets/Tulasi.jpg",
     "Monisha Prashant":            "./Assets/monisha.jpg",
     "Dhanalakshmi Belle":          "./Assets/Dhanalakshmi.jpeg",
-    "Lalchand Kumawat":            "./Assets/Lalchand.jpeg"
+    "Lalchand Kumawat":            "./Assets/Lalchand.jpeg",
+    "Swetha Sundaran":             "./Assets/Swetha.jpeg"
   };
   /* team → filter group */
   const TEAM_GROUP = {
