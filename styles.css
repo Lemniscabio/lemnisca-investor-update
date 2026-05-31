@@ -133,7 +133,7 @@
 
   /* ---------- SNAPSHOT ---------- */
   .snapshot { border-top: 1px solid var(--line); }
-  .snap-row { display: grid; grid-template-columns: 200px 1fr; gap: 30px; padding: 24px 4px; border-bottom: 1px solid var(--line-soft); align-items: baseline; transition: padding-left .25s ease, background .25s ease; }
+  .snap-row { display: grid; grid-template-columns: 260px 1fr; gap: 30px; padding: 24px 4px; border-bottom: 1px solid var(--line-soft); align-items: baseline; transition: padding-left .25s ease, background .25s ease; }
   .snap-row:hover { padding-left: 14px; background: linear-gradient(90deg, var(--accent-glow), transparent 40%); }
   .snap-area { font-size: clamp(17px, 2vw, 21px); letter-spacing: -0.01em; color: var(--ink); }
   .snap-detail { color: var(--muted); font-size: 15px; line-height: 1.6; }
