@@ -65,7 +65,7 @@
 
     <p class="label">Enter password</p>
 
-    <form method="POST" action="/api/auth" id="loginForm">
+    <form method="POST" action="/api/auth" id="loginForm" onsubmit="fixAction(this)">
       <input type="password" name="password" id="pwInput" placeholder="Password" autofocus autocomplete="current-password" />
       <div class="err" id="errMsg">
         <!-- show error from ?error=1 query param -->
@@ -77,6 +77,11 @@
   <script>
     if (new URLSearchParams(location.search).get('error') === '1') {
       document.getElementById('errMsg').textContent = 'Incorrect password.';
+    }
+    function fixAction(form) {
+      if (location.pathname.startsWith('/investor-update')) {
+        form.action = '/investor-update/api/auth';
+      }
     }
   </script>
 </body>

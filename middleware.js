@@ -3,7 +3,6 @@ export const config = {
 };
 
 export default function middleware(req) {
-  // Parse cookies from header (req.cookies is Next.js only, not available here)
   const cookieHeader = req.headers.get('cookie') || '';
   const cookies = Object.fromEntries(
     cookieHeader.split(';').map(c => {
@@ -16,6 +15,13 @@ export default function middleware(req) {
 
   if (token && cookies['lemnisca_auth'] === token) {
     return; // pass through
+  }
+
+  // When accessed via lemnisca.bio rewrite, redirect back through the proxy
+  const fwdHost = req.headers.get('x-forwarded-host');
+  const fwdProto = req.headers.get('x-forwarded-proto') || 'https';
+  if (fwdHost && fwdHost.includes('lemnisca.bio')) {
+    return Response.redirect(`${fwdProto}://${fwdHost}/investor-update/login.html`);
   }
 
   return Response.redirect(new URL('/login.html', req.url));
