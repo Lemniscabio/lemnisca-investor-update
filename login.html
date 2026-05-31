@@ -61,12 +61,12 @@
 </head>
 <body>
   <div class="gate">
-    <img src="./Assets/logo_white.png" alt="Lemnisca" style="width:140px;height:auto;margin-bottom:32px;" />
+    <p style="font-size:28px;font-weight:400;letter-spacing:-0.02em;color:#f4f5f6;margin-bottom:32px;font-family:'Helvetica Neue',Helvetica,sans-serif;">Lemnisca</p>
 
-    <p class="label">Lemnisca &mdash; Confidential</p>
+    <p class="label">Enter password</p>
 
     <form method="POST" action="/api/auth" id="loginForm">
-      <input type="password" name="password" id="pwInput" placeholder="Enter password" autofocus autocomplete="current-password" />
+      <input type="password" name="password" id="pwInput" placeholder="Password" autofocus autocomplete="current-password" />
       <div class="err" id="errMsg">
         <!-- show error from ?error=1 query param -->
       </div>
